@@ -270,3 +270,10 @@ footer a{color:var(--dim)}
 .places button:hover{border-color:var(--gold)}
 .places button[aria-pressed="true"]{background:rgba(208,170,102,.18);border-color:var(--gold);color:var(--gold2)}
 .chart::before{content:"";position:absolute;inset:0;z-index:1;border-radius:50%;box-shadow:inset 0 0 0 8px rgba(208,170,102,.12),inset 0 0 0 9px rgba(208,170,102,.35);pointer-events:none}
+/* ---------- start here (reading guide) ---------- */
+.start{margin-top:46px;padding:28px clamp(20px,3vw,34px);border:1px solid var(--line);border-radius:var(--r);background:var(--ink2);max-width:860px}
+.start h3{font-size:clamp(24px,2.8vw,32px);margin:6px 0 12px}
+.start ol{margin:0;padding-left:1.3em;display:grid;gap:8px}
+.start li{color:var(--text)}
+.start li b{color:var(--gold2);font-weight:500}
+.start p{margin:14px 0 0}
