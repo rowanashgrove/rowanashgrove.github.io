@@ -69,7 +69,7 @@
     else amb.pause();
   });
 
-  /* ---------------- lightbox for the 1.2 pictures ---------------- */
+  /* ---------------- lightbox for the pictures ---------------- */
   const lb = $("#lb"), lbImg = $("#lbImg"), lbCap = $("#lbCap");
   let lastFocus = null;
   document.querySelectorAll(".tile").forEach(t => t.addEventListener("click", () => {
@@ -85,25 +85,25 @@
   /* ---------------- the atlas ---------------- */
   // world metres -> map: u = x / 480 + .5, v = z / 480 + .5 (the game's own world_to_uv)
   const PLACES = [
-    { id: "house", x: 0, z: -40, name: "Hollowmere House", kind: "The house on the hill", img: "media/g-manor_dusk.jpg",
+    { id: "house", x: 0, z: -40, name: "Hollowmere House", kind: "The house on the hill", img: "media/r13-manor.webp",
       text: "Rowan Ashgrove's house, where the notice said a cataloguer was wanted. The study hearth is the first place of power you stand in, the Ledger is kept by the fire, and a shelf in the east wing fills with what you earn.",
       meta: ["Rowan Ashgrove", "The study", "Thread-walk point"] },
-    { id: "hatch", x: -24, z: -26, name: "The undercroft", kind: "New in 1.2", img: "media/undercroft.webp", hour: true,
+    { id: "hatch", x: -24, z: -26, name: "The undercroft", kind: "New in 1.2", img: "media/v13-undercroft.webp", hour: true,
       text: "A chained hatch in the grass beside the house. Below it, torch-lit rooms, a cellar ledger in Rowan's hand, and a working that was begun and never given a Term. It opens once the Hollow Hour has had its say.",
       meta: ["Opens in Act II", "The Hollowed", "Undercroft Seal"] },
-    { id: "hamlet", x: -30, z: 30, name: "Hollowmere", kind: "The hamlet", img: "media/companion.webp",
+    { id: "hamlet", x: -30, z: 30, name: "Hollowmere", kind: "The hamlet", img: "media/v13-companion.webp",
       text: "A ring of cottages round a green, a well and a cart. Agnes Tolley sells herbs and buys fish, Abel Marsh keeps the chandlery, Ines Varga sells charms, and Mr Crane deals in curios behind a white mask.",
       meta: ["Shops", "Bonds and gifts", "Companions"] },
-    { id: "pasture", x: -38, z: -12, name: "The pasture", kind: "Farm and fold", img: "media/g-pasture.jpg",
+    { id: "pasture", x: -38, z: -12, name: "The pasture", kind: "Farm and fold", img: "media/v13-pasture.webp",
       text: "Sheep, cows, horses and pigs behind a split-rail fence, with a bench where the light comes low across the grass in the evening.",
       meta: ["Animals", "A bench"] },
-    { id: "ashford", x: -105, z: -95, name: "Ashford", kind: "The second village", img: "media/g-hollowmere.jpg",
+    { id: "ashford", x: -105, z: -95, name: "Ashford", kind: "The second village", img: "media/v13-ashford.webp",
       text: "Up the cart track from the house. Odo the miller, Wren, Sister Ysolde and Bram the smith, and a well with a bench beside it. Ashford has its own thread to learn and its own troubles.",
       meta: ["Odo · Wren · Ysolde · Bram", "Thread-walk point"] },
-    { id: "mere", x: 80, z: -16, name: "Stillwater Mere", kind: "Water and quiet", img: "media/fishing.webp",
+    { id: "mere", x: 80, z: -16, name: "Stillwater Mere", kind: "Water and quiet", img: "media/v13-fishing.webp",
       text: "Reeds, lilies and a jetty with a boat tied up. Cast from the side of the jetty and watch the red float: roach and perch by day, eels after dark, and a silverside that rises only under a full moon.",
       meta: ["Fishing", "Six kinds of fish", "Bench on the west bank"] },
-    { id: "wood", x: 112, z: 98, name: "The Whisperwood", kind: "The old forest", img: "media/g-whisperwood.jpg", hour: true,
+    { id: "wood", x: 112, z: 98, name: "The Whisperwood", kind: "The old forest", img: "media/v13-whisperwood.webp", hour: true,
       text: "Light shafts, mist and old trees that remember. The Whisperwood repeats whatever you tell it, and at its heart stands the Listening Tree, where the Echo keeps a woodcutter's last day on a loop.",
       meta: ["The Listening Tree", "The Echo", "Wisps"] },
   ];
@@ -131,11 +131,11 @@
 
   /* ---------------- spellbook ---------------- */
   const SPELLS = [
-    { g: "ᚲ", n: "Kenaz bolt", img: "media/g-spell_bolts.jpg", what: "The first working: a bolt of light from the hand. Quick, cheap on Attention, and the thread every other spell is pulled through.", fear: "The Hollowed take it deep" },
-    { g: "ᛊ", n: "Ember Hand", img: "media/g-spell_ember.jpg", what: "A cone of fire that lights what it touches and keeps it burning. The Frayed fear it; Cinders barely notice.", fear: "Frayed · Kiln · Flare" },
-    { g: "ᚦ", n: "Thurisaz", img: "media/g-spell_thurisaz.jpg", what: "The thorn: a hammer of force round you that throws shades back. Wisps scatter from it.", fear: "Wisps · Shatter" },
-    { g: "ᛉ", n: "Salt Circle", img: "media/g-spell_salt.jpg", what: "A ring of salt on the ground that harms what stands in it and slows it. Cinders are undone by salt.", fear: "Cinders · Kiln" },
-    { g: "ᚾ", n: "Knot", img: "media/g-spell_knot.jpg", what: "Need-rune binding: a red thread that holds a shade where it stands while you work. The Knotted fear their own kind of knot.", fear: "Knotted · Shatter" },
+    { g: "ᚲ", n: "Kenaz bolt", img: "media/v13-spell_bolts.webp", what: "The first working: a bolt of light from the hand. Quick, cheap on Attention, and the thread every other spell is pulled through.", fear: "The Hollowed take it deep" },
+    { g: "ᛊ", n: "Ember Hand", img: "media/v13-spell_ember.webp", what: "A cone of fire that lights what it touches and keeps it burning. The Frayed fear it; Cinders barely notice.", fear: "Frayed · Kiln · Flare" },
+    { g: "ᚦ", n: "Thurisaz", img: "media/v13-spell_thurisaz.webp", what: "The thorn: a hammer of force round you that throws shades back. Wisps scatter from it.", fear: "Wisps · Shatter" },
+    { g: "ᛉ", n: "Salt Circle", img: "media/v13-spell_salt.webp", what: "A ring of salt on the ground that harms what stands in it and slows it. Cinders are undone by salt.", fear: "Cinders · Kiln" },
+    { g: "ᚾ", n: "Knot", img: "media/v13-spell_knot.webp", what: "Need-rune binding: a red thread that holds a shade where it stands while you work. The Knotted fear their own kind of knot.", fear: "Knotted · Shatter" },
   ];
   $("#spellCards").innerHTML = SPELLS.map(s => `
     <button class="spell" type="button" aria-pressed="false" aria-label="${s.n}: turn the card">
@@ -146,11 +146,11 @@
 
   /* ---------------- bestiary ---------------- */
   const BEASTS = [
-    { n: "The Frayed", s: "Common", img: "media/g-spell_ember.jpg", lore: "Shades that come up where a thread has worn through. They hunt in twos and threes, flank, and lunge. Close the tear behind them or more will come.", fear: "Ember Hand", resist: "Nothing in particular", where: "Every tear in the Reach" },
-    { n: "Wisps", s: "Common", img: "media/g-whisperwood.jpg", lore: "Small, pale and quick, keeping their distance and throwing cold light. Drawing Breath can swallow what they throw.", fear: "Thurisaz", resist: "Fire passes half through", where: "The Whisperwood" },
-    { n: "The Knotted", s: "Elder", img: "media/g-warning.jpg", lore: "A big shade bound up in red thread. It winds up, then charges. Step aside, and burn it while it recovers.", fear: "Knot", resist: "Bolts glance off", where: "Deeper tears" },
-    { n: "Cinders", s: "New in 1.2", img: "media/new_shades.webp", lore: "A Frayed that came up through a hearth and kept the heat. Quick, and fire does almost nothing to it.", fear: "Salt Circle", resist: "Ember Hand", where: "From Act II" },
-    { n: "The Hollowed", s: "New in 1.2", img: "media/undercroft.webp", lore: "A Knotted that waited so long the thread wore through and left only the shape. When it falls it breaks into two lesser Frayed.", fear: "Kenaz bolts", resist: "Knot barely holds it", where: "From Act II · the undercroft" },
+    { n: "The Frayed", s: "Common", img: "media/v13-spell_bolts.webp", lore: "Shades that come up where a thread has worn through. They hunt in twos and threes, flank, and lunge. Close the tear behind them or more will come.", fear: "Ember Hand", resist: "Nothing in particular", where: "Every tear in the Reach" },
+    { n: "Wisps", s: "Common", img: "media/v13-wisps.webp", lore: "Small, pale and quick, keeping their distance and throwing cold light. Drawing Breath can swallow what they throw.", fear: "Thurisaz", resist: "Fire passes half through", where: "The Whisperwood" },
+    { n: "The Knotted", s: "Elder", img: "media/v13-knotted.webp", lore: "A big shade bound up in red thread. It winds up, then charges. Step aside, and burn it while it recovers.", fear: "Knot", resist: "Bolts glance off", where: "Deeper tears" },
+    { n: "Cinders", s: "New in 1.2", img: "media/v13-new_shades.webp", lore: "A Frayed that came up through a hearth and kept the heat. Quick, and fire does almost nothing to it.", fear: "Salt Circle", resist: "Ember Hand", where: "From Act II" },
+    { n: "The Hollowed", s: "New in 1.2", img: "media/v13-undercroft.webp", lore: "A Knotted that waited so long the thread wore through and left only the shape. When it falls it breaks into two lesser Frayed.", fear: "Kenaz bolts", resist: "Knot barely holds it", where: "From Act II · the undercroft" },
   ];
   const tabs = $("#beastTabs"), panel = $("#beastPanel");
   const showBeast = i => {
@@ -207,6 +207,28 @@
     t.addEventListener("pointermove", e => { const r = t.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; cvr.style.setProperty("--ry", (x * 34) + "deg"); cvr.style.setProperty("--rx", (-y * 18) + "deg"); });
     t.addEventListener("pointerleave", () => { cvr.style.removeProperty("--ry"); cvr.style.removeProperty("--rx"); });
   });
+
+  /* ---------------- letters: email sign-up into Rowan's own Google Form ---------------- */
+  const SIGNUP = { action: "", field: "" }; // the Google Form's formResponse URL and its email entry id
+  const su = $("#signup");
+  if (su) {
+    if (!SIGNUP.action) {
+      su.hidden = true;
+      $("#lettersTitle").textContent = "Hear when the Reach changes";
+      $(".letters p").textContent = "Follow the game on itch.io for a note with every update, read the news here, or add the RSS feed to your reader.";
+      const f = $(".letters .also a"); if (f) f.textContent = "Follow the game on itch.io";
+    } else {
+      su.addEventListener("submit", e => {
+        e.preventDefault();
+        const em = $("#suEmail"), note = $("#suNote");
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())) { note.textContent = "That email doesn't look right. Check it and try again."; em.focus(); return; }
+        const body = new URLSearchParams(); body.append(SIGNUP.field, em.value.trim());
+        fetch(SIGNUP.action, { method: "POST", mode: "no-cors", body }).then(() => {
+          su.classList.add("done"); note.textContent = "Thank you. The next letter from the Reach will find you.";
+        }).catch(() => { note.textContent = "Something went wrong. Please try again in a moment."; });
+      });
+    }
+  }
 
   // every link off the site opens in a new tab
   document.querySelectorAll('a[href^="http"]').forEach(a => { a.target = "_blank"; a.rel = "noopener"; });
