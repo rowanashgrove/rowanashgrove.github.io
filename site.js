@@ -209,7 +209,7 @@
   });
 
   /* ---------------- letters: email sign-up into Rowan's own Google Form ---------------- */
-  const SIGNUP = { action: "", field: "" }; // the Google Form's formResponse URL and its email entry id
+  const SIGNUP = { action: "https://docs.google.com/forms/d/e/1FAIpQLSd_1ODE-FIfMC1K2MM_JD1D4B8q18KRP0xduUwVY5o1mtmgNQ/formResponse", field: "entry.360860348" }; // the Google Form's formResponse URL and its email entry id
   const su = $("#signup");
   if (su) {
     if (!SIGNUP.action) {
