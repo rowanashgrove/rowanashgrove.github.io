@@ -277,3 +277,4 @@ footer a{color:var(--dim)}
 .start li{color:var(--text)}
 .start li b{color:var(--gold2);font-weight:500}
 .start p{margin:14px 0 0}
+.devnote{display:inline-block;margin:14px 0 0;padding:6px 12px;border-left:3px solid var(--ember);background:rgba(12,10,16,.55);font-size:14px;color:var(--gold2)}
